@@ -1,8 +1,6 @@
 class Solution:
     def isFascinating(self, n: int) -> bool:
-        second=2*n
-        third=3*n
-        num=str(n)+str(second)+str(third)
+        num=str(n)+str(2*n)+str(3*n)
         if "0" not in num:
             for i in num:
                 if num.count(i)!=1:
