@@ -11,11 +11,9 @@ class Solution:
            if main.count(i)!=1:
                a=i
                break
-       b=[]
        miss=orgsum-actsum+a
-       b.append(a)
-       b.append(miss)
-       return b
+       return [a,miss]
+      
 
 
 
