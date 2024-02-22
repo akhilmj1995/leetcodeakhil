@@ -2,10 +2,8 @@ class Solution:
     def findJudge(self, n: int, trust: List[List[int]]) -> int:
         a=[]
         b=[]
-        if len(trust)==0 and n==1:
-            return n
-        if len(trust)==0:
-            return -1
+        if trust==[]:
+            return n if n==1 else -1
         for i in trust:
              b.append(i[0])
              a.append(i[1])
