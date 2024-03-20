@@ -1,11 +1,10 @@
 class Solution:
     def addDigits(self, num: int) -> int:
-        a=num
-        while len(str(a))>1:
+        while len(str(num))>1:
             sum=0
-            for i in str(a):
+            for i in str(num):
                 sum+=int(i)
-            a=sum
-        return a
+            num=sum
+        return num
 
             
