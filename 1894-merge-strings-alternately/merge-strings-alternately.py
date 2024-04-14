@@ -1,20 +1,18 @@
 class Solution:
     def mergeAlternately(self, word1: str, word2: str) -> str:
      k=str()
-     for i in range(100):
-        if i>=len(word1)and i>=len(word2):
-            break
-        try:
-            if word1[i]:
-             k+=word1[i]
-        except:
-            pass
-        try:
-            if word2[i]:
-                k+=word2[i]
-        except:
-              continue
-     return k 
+     if len(word1)>len(word2):
+        minlen=len(word2)
+        remain=word1[minlen:]
+     else:
+        minlen=len(word1)
+        remain=word2[minlen:]
+     for i in range(minlen):
+        k+=word1[i]
+        k+=word2[i]
+     k+=remain
+     return k
+           
           
         
         
