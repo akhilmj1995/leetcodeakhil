@@ -1,15 +1,18 @@
 class Solution:
     def isHappy(self, n: int) -> bool:
+        m=str(n)
         array=[]
         while True:
-           k=0
-           for i in str(n):
-             k+=int(i)**2
-           if k==1:
-              return True
-           if k in array:
-             return False
-           array.append(k)
-           n=k
-
-
+            sum=0
+            for i in m:
+                sum+=int(i)**2
+            if sum in array:
+                return False
+            array.append(sum)
+            if sum==1:
+                return True
+            m=str(sum)
+        return False
+        
+    
+        
